@@ -40,10 +40,9 @@
         var formulario = document.formulario_registro,
             elementos = formulario.elementos;
         var validar = function(){
-            var name = document.getElementById('nombre').value;
+            var name = document.getElementById('nombre').value.toLowerCase();
             var contra = document.getElementById('contra').value;
-            console.log(name);
-            console.log(contra);
+
             if(name == 'laura' && contra == '20lv'){
                 window.open("mes08.html");
             }else{
