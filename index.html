@@ -44,10 +44,10 @@
             var contra = document.getElementById('contra').value;
             console.log(name);
             console.log(contra);
-            if(name != 'laura' || contra != '20lv'){
-                alert("El nombre o contraseña es inválido bebé.");
-            }else{
+            if(name == 'laura' && contra == '20lv'){
                 window.open("mes08.html");
+            }else{
+                alert("El nombre o contraseña es inválido bebé.");
             }
         }
         formulario.addEventListener("submit", validar);
