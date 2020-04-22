@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                             <br>
-                            <button id="btn_ingresar" class="btn btn-primary btn-block" type="submit" value="validar">Ingresar</button>
+                            <button id="btn_ingresar" class="btn btn-primary btn-block" type="submit">Ingresar</button>
                         </form>
                     </div>
                 </div>
@@ -44,10 +44,10 @@
             var contra = document.getElementById('contra').value;
             console.log(name);
             console.log(contra);
-            if(name == 'laura' && contra == '20lv'){
-                location.href="./mes08.html";
+            if(name != 'laura' || contra != '20lv'){
+                alert("El nombre o contraseña es inválido bebé.");
             }else{
-                alert("El nombre o contraseña es inválido bebé");
+                window.open("mes08.html");
             }
         }
         formulario.addEventListener("submit", validar);
