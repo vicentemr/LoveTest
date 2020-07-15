@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titulo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Te Amo</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -28,26 +28,25 @@
                                 </div>
                             </div>
                             <br>
-                            <button id="btn_ingresar" class="btn btn-primary btn-block" type="submit" value="validar">Ingresar</button>
+                            <button id="btn_ingresar" class="btn btn-primary btn-block" type="submit">Ingresar</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <script>
         var formulario = document.formulario_registro,
             elementos = formulario.elementos;
         var validar = function(){
-            var name = document.getElementById('nombre').value;
+            var name = document.getElementById('nombre').value.toLowerCase();
             var contra = document.getElementById('contra').value;
-            console.log(name);
-            console.log(contra);
+
             if(name == 'laura' && contra == '20lv'){
-                location.href="./mes08.html";
+                window.open("menu.html");
             }else{
-                alert("El nombre o contraseña es inválido bebé");
+                alert("El nombre o contraseña es inválido bebé.");
             }
         }
         formulario.addEventListener("submit", validar);
